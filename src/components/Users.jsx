@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { FaUserAlt } from 'react-icons/fa';
 import api from '../services/api';
+import { Link } from 'react-router-dom';
 function Users() {
   const [users, setUsers] = useState([]);
   const [nextPage, setNextPage] = useState(null);
@@ -57,7 +58,9 @@ function Users() {
               </Td>
               <Td>{user.login}</Td>
               <Td>
-                <Button>See More</Button>
+                <Button>
+                  <Link to={`user/${user.login}`}>See More</Link>
+                </Button>
               </Td>
             </Tr>
           ))}
