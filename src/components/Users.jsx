@@ -58,9 +58,9 @@ function Users() {
               </Td>
               <Td>{user.login}</Td>
               <Td>
-                <Button>
-                  <Link to={`user/${user.login}`}>See More</Link>
-                </Button>
+                <Link to={`user/${user.login}`}>
+                  <Button>See More</Button>
+                </Link>
               </Td>
             </Tr>
           ))}
