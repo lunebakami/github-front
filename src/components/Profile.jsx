@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Flex, Image, List, ListIcon, ListItem } from '@chakra-ui/react';
+import { Flex, Image, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
 import {
   FaRegAddressCard,
   FaRegClock,
@@ -41,12 +41,13 @@ export function Profile({ username }) {
           <ListIcon as={FaRegAddressCard} />
           <strong>Profile:</strong>{' '}
           <a href={user?.html_url} target="_blank" rel="noreferrer">
-            {user?.html_url}
+            <Text as="ins">{user?.html_url}</Text>
           </a>
         </ListItem>
         <ListItem>
           <ListIcon as={FaRegClock} />
-          <strong>Created At:</strong> {user?.created_at}
+          <strong>Created At:</strong>{' '}
+          {new Date(user?.created_at).toLocaleString('en-US')}
         </ListItem>
       </List>
     </Flex>

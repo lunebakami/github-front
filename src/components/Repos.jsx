@@ -3,6 +3,7 @@ import {
   TableContainer,
   Tbody,
   Td,
+  Text,
   Th,
   Thead,
   Tr,
@@ -39,7 +40,7 @@ export function Repos({ username }) {
               <Td> {repo.name}</Td>
               <Td>
                 <a target={'_blank'} href={repo.html_url} rel="noreferrer">
-                  {repo.html_url}
+                  <Text as="ins">{repo.html_url}</Text>
                 </a>
               </Td>
             </Tr>
