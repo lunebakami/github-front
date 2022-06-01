@@ -21,7 +21,12 @@ export function Profile({ username }) {
   }, []);
 
   return (
-    <Flex gap={'10'} justifyContent={'space-between'} alignItems={'center'}>
+    <Flex
+      marginBottom={'50'}
+      gap={'10'}
+      justifyContent={'space-between'}
+      alignItems={'center'}
+    >
       <Image src={user?.avatar_url} w="200" h="200" rounded="full" />
       <List spacing={3}>
         <ListItem>

@@ -10,7 +10,7 @@ export function User() {
 
   return (
     <Flex justifyContent={'center'} alignItems={'center'} direction={'column'}>
-      <Container maxW="container.sm" marginTop="50">
+      <Container maxW="container.md" marginTop="50">
         <Profile username={username} />
         <Repos username={username} />
       </Container>
